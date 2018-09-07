@@ -1,0 +1,35 @@
+<div class="signers-text">
+<h1>We are so proud to have you among us....</h1>
+</div>
+<div class="signers-page">
+
+<div class="signers-list">
+<ul>
+  {{#each listOfSigners}}
+
+{{#if this.url}}
+	     {{#if this.city}}
+        <div class="list-items">  <li><a href="{{this.url}}">{{this.userinfo}}</a> {{this.age}} <a href="./signers/{{this.city}}">{{this.city}}</a></li></div>
+	     {{else}}
+	    <div class="list-items"> <li><a href="{{this.url}}">{{this.userinfo}}</a> {{this.age}}</li></div>
+	     {{/if}}
+{{else}}
+	     {{#if this.city}}
+<div class="list-items"> <li>{{this.userinfo}} {{this.age}} <a href="./signers/{{this.city}}">{{this.city}}</a></li></div>
+	     {{else}}
+<div class="list-items"> <li>{{this.userinfo}} {{this.age}}</li> </div>
+	     {{/if}}
+{{/if}}
+
+  {{/each}}
+</ul></br>
+</div>
+<div class="signed-links">
+<a href="./profile/edit">Edit your profile</a></br>
+<a href="./deleteSignature">Delete your signature</a></br></br>
+</div>
+<div class="signers-logout">
+
+{{> logout }}
+</div>
+</div>

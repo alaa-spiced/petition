@@ -1,0 +1,28 @@
+<div class="city-signers-text">
+<h1>Signers of {{cityName}} city ......</h1>
+</div>
+
+<div class="city-signers-page">
+
+<div class="list-of-signers">
+<ul>
+  {{#each listOfSigners}}
+
+{{#if this.url}}
+          <div class="list-items"> <li><a href="{{this.url}}">{{this.userinfo}}</a> {{this.age}}</li></div>
+	     {{else}}
+	    <div class="list-items"> <li>{{this.url}} {{this.userinfo}} {{this.age}}</li></div>
+{{/if}}
+
+{{/each}}
+</ul></br>
+</div>
+<div class="signed-links">
+<!-- <a href="./signers">See all {{count}} signers</a></br> -->
+<a href="./profile/edit">Edit your profile</a></br>
+<a href="./deleteSignature">Delete your signature</a></br></br>
+</div>
+<div class="city-logout">
+{{> logout }}
+</div>
+</div>

@@ -1,0 +1,19 @@
+<div class="edit-profile-text"><h1>Edit your profile...</h1></div>
+<div class="edit-profile-page">
+
+
+<div class="edit-profile-inputs">
+<form method="post">
+    <div><input class="input profile-input" type="text" name="firstname" placeholder="{{userData.first_name}}" ></div>
+    <div><input class="input profile-input" type="text" name="lastname" placeholder="{{userData.last_name}}"></div>
+    <div><input class="input profile-input" type="text" name="email" placeholder="{{userData.email}}"></div>
+    <div><input class="input profile-input" type="password" name="password" placeholder="password"></div>
+    <div><input class="input profile-input" type="text" name="age" placeholder="{{userData.age}}"></div>
+    <div><input class="input profile-input" type="text" name="city" placeholder="{{userData.city}}"></div>
+    <div><input class="input profile-input" type="text" name="url" placeholder="{{userData.url}}"></div></br></br>
+  </div>
+  <div>
+    <button class="sign-button update" type="submit">Update</button></br>{{> logout }}
+</form>
+</div>
+</div>
